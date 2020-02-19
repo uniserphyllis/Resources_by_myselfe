@@ -3,7 +3,6 @@
 # 自行定義 Context Manager
 # reference material:http://www.bjhee.com/python-context.html
 
-
 class File(object):
   def __init__(self, filename, mode):
     # 設定檔名與開檔模式
@@ -20,7 +19,6 @@ class File(object):
   def __exit__(self, type, value, traceback):
     print("關閉檔案：" + self.filename)
     self.open_file.close()
-
 
 with File("file.txt", "w") as f:
       print("寫入檔案...")
